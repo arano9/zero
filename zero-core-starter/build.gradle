@@ -1,6 +1,3 @@
-plugins {
-    id 'org.springframework.boot' version '2.3.4.RELEASE' apply true
-}
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -13,5 +10,4 @@ dependencies {
             "com.google.code.gson:gson",
             project(":zero-caller-client-sdk")
     )
-    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 }
