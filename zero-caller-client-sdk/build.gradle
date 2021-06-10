@@ -1,0 +1,7 @@
+dependencies {
+    implementation(
+            "com.google.code.gson:gson",
+            "cn.hutool:hutool-all",
+            project(':zero-service'),
+    )
+}

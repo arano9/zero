@@ -1,0 +1,17 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.4.RELEASE' apply true
+}
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+dependencies {
+    implementation(
+            "org.springframework.boot:spring-boot-starter",
+            "org.slf4j:log4j-over-slf4j",
+            "com.google.code.gson:gson",
+            project(":zero-caller-client-sdk")
+    )
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}

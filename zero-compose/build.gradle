@@ -1,0 +1,28 @@
+group('com.arano')
+version('1.0.0-snapshot')
+ext {
+    separator = System.getProperty("file.separator")
+    versionControl = [
+            springBootVersion: '2.3.4.RELEASE',
+    ]
+}
+subprojects {
+
+    String subPrjName = getProject().getName();
+    if (subPrjName.indexOf("bom") == -1) {
+        apply plugin: 'java'
+        apply plugin: 'java-library'
+        sourceCompatibility = '1.8'
+
+        dependencies {
+            def bomPrj = findProject(':zero-bom')
+            implementation platform(bomPrj)
+            annotationProcessor(
+                    platform("org.springframework.boot:spring-boot-dependencies:${rootProject.ext.versionControl.springBootVersion}"),
+            )
+        }
+    }
+
+
+}
+

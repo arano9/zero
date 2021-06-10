@@ -1,0 +1,28 @@
+apply plugin: 'java-platform'
+
+javaPlatform {
+    allowDependencies()
+}
+ext {
+    separator = System.getProperty("file.separator")
+    versionControl = [
+            springBootVersion: '2.3.4.RELEASE',
+            guavaGsonVersion : '2.8.6',
+            hutoolVersion    : '5.5.9',
+
+    ]
+}
+dependencies {
+    constraints {
+        api(
+                "io.minio:minio:${project.versionControl.minioVersion}",
+                "com.google.code.gson:gson:${project.versionControl.guavaGsonVersion}",
+                "cn.hutool:hutool-all:${project.versionControl.hutoolVersion}",
+        )
+    }
+    api(
+            enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${project.versionControl.springBootVersion}"),
+    )
+
+}
+
