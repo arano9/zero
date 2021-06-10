@@ -1,0 +1,9 @@
+rootProject.name = 'zero-root'
+
+include('zero-bom')
+include('zero-core-starter')
+include('zero-sample')
+include('zero-caller-client-sdk')
+include('zero-service')
+include('zero-service-stub')
+

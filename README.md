@@ -1,14 +1,14 @@
-**项目背景:** 该项目是在开发中使用第三方sdk进行交互的场景下催生而来，由于使用sdk交互的时候，经常需要设置很多sdk的参数，以及一些调用的模板逻辑。基于对spring-bean的理解，使用动态代理将这部分逻辑封装起来，sdk的交互逻辑就可屏蔽起来。因为该项目算是本人对spring理解进阶的第一步，特名为zero。
+**项目背景:**该项目是在开发中使用第三方sdk进行交互的场景下催生而来，由于使用sdk交互的时候，经常需要设置很多sdk的参数，以及一些调用的模板逻辑。基于对spring-bean的理解，使用动态代理将这部分逻辑封装起来，sdk的交互逻辑就可屏蔽起来。因为该项目算是本人对spring理解进阶的第一步，特名为zero。
 
 **项目结构:**
 
-打开zero-compose 使用idea 打开setting文件即可导入，所示如图：
+打开zero 使用idea 打开setting文件即可导入，所示如图：
 
-![image-20210610124211139](https://raw.githubusercontent.com/arano9/pic-host/main/img/image-20210610124211139.png)
+![image-20210610140744344](https://raw.githubusercontent.com/arano9/pic-host/main/img/image-20210610140744344.png)
 
 
 
- compose作为根项目编排
+ zero-root作为根项目编排
 
  bom作为通用依赖管理
 

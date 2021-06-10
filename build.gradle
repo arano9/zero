@@ -1,7 +1,6 @@
 group('com.arano')
 version('1.0.0-snapshot')
 ext {
-    separator = System.getProperty("file.separator")
     versionControl = [
             springBootVersion: '2.3.4.RELEASE',
     ]

@@ -1,9 +1,0 @@
-rootProject.name = 'zero-compose'
-
-includeFlat('zero-bom')
-includeFlat('zero-core-starter')
-includeFlat('zero-sample')
-includeFlat('zero-caller-client-sdk')
-includeFlat('zero-service')
-includeFlat('zero-service-stub')
-
