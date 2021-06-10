@@ -6,13 +6,15 @@ ext {
     ]
 }
 subprojects {
-
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
     String subPrjName = getProject().getName();
     if (subPrjName.indexOf("bom") == -1) {
         apply plugin: 'java'
         apply plugin: 'java-library'
         sourceCompatibility = '1.8'
-
         dependencies {
             def bomPrj = findProject(':zero-bom')
             implementation platform(bomPrj)
