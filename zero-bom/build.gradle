@@ -13,7 +13,6 @@ ext {
 dependencies {
     constraints {
         api(
-                "io.minio:minio:${project.versionControl.minioVersion}",
                 "com.google.code.gson:gson:${project.versionControl.guavaGsonVersion}",
                 "cn.hutool:hutool-all:${project.versionControl.hutoolVersion}",
         )
